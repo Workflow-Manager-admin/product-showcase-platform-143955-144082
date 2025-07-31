@@ -1,33 +1,32 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+background: https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1280&q=80
+title: Product Showcase Presentation
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+  ## Modern Product Presentation
+  Centered, visually focused slides to show off your product and features in style.
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+color-schema: light
 ---
 
-# Welcome to Slidev
+# {{ title }}
 
-Presentation slides for developers
+**Create, View, and Share Beautiful Product Slides**
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="mt-2 text-lg" style="color: #0A192F">Your product, presented in the best light.</div>
+
+<div class="flex w-full justify-center items-center mt-10">
+  <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Product Image" class="rounded-xl border shadow-lg" style="height: 230px;" />
+</div>
+
+<div class="mt-12 py-1 flex justify-center items-center">
+  <button @click="$slidev.nav.next" class="px-6 py-2 rounded-lg font-bold text-white" style="background-color: #F9A826;">
+    Next &rarr;
+  </button>
 </div>
 
 <div class="abs-br m-6 text-xl">
@@ -39,29 +38,58 @@ Presentation slides for developers
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+
+transition: fade-out
+layout: center
+class: text-center
+---
+
+# Why this platform?
+
+<div class="flex justify-center">
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Showcase" class="rounded-xl shadow-md" style="height: 180px;" />
+</div>
+<div class="mt-10 flex justify-center">
+  <ul style="list-style: none; padding: 0;">
+    <li style="color: #0A192F; font-weight: bold;"><span style="color: #F9A826;">&#9679;</span> Modern & Light Theme</li>
+    <li style="color: #0A192F; font-weight: bold;"><span style="color: #F9A826;">&#9679;</span> Effortless Slide Navigation</li>
+    <li style="color: #0A192F; font-weight: bold;"><span style="color: #F9A826;">&#9679;</span> Responsive on Any Device</li>
+    <li style="color: #0A192F; font-weight: bold;"><span style="color: #F9A826;">&#9679;</span> Eye-catching Product Media</li>
+    <li style="color: #0A192F; font-weight: bold;"><span style="color: #F9A826;">&#9679;</span> Shareable Presentation Links & QR</li>
+  </ul>
+</div>
+
+---
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+transition: slide-up
+background: white
+class: text-center
+---
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+# Effortless Navigation
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+Navigate your product slides with ease using:
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<div class="flex flex-col items-center mt-8 mb-6">
+  <span class="text-4xl" style="color: #0A192F;">
+    <kbd>←</kbd> <kbd>→</kbd> &nbsp; <kbd>Space</kbd> &nbsp; <kbd>PageUp</kbd> <kbd>PageDown</kbd>
+  </span>
+  <small class="mt-3 text-md" style="color: #222;">
+    Keyboard & touch navigation. Responsive arrows appear on all devices.
+  </small>
+</div>
+
+<div class="flex justify-center gap-10 mt-7">
+  <button @click="$slidev.nav.prev" class="p-3 rounded-lg" style="background:#F9A826;color:#FFF;"><carbon:arrow-left /> Prev</button>
+  <button @click="$slidev.nav.next" class="p-3 rounded-lg" style="background:#0A192F;color:#FFF;">Next <carbon:arrow-right /></button>
+</div>
+
+---
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -89,100 +117,66 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+transition: slide-left
+background: "#F7FAFC"
+class: text-center
+---
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+# Responsive & Modern
 
-## Keyboard Shortcuts
+<div class="flex flex-col md:flex-row items-center justify-center mt-8 gap-7">
+  <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=280&q=80" alt="Mobile Device" class="rounded-lg shadow" style="max-height:140px;" />
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=280&q=80" alt="Desktop Device" class="rounded-lg shadow" style="max-height:140px;" />
+</div>
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<div class="mt-6 text-lg" style="color:#0A192F;">
+  Looks perfect on mobile, tablet, and desktop. Slides adapt to your audience.
+</div>
 
 ---
 layout: two-cols
 layoutClass: gap-16
 ---
 
-# Table of contents
+transition: slide-right
+background: white
+class: text-center
+---
 
-You can use the `Toc` component to generate a table of contents for your slides:
+# Featured Product
 
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
+<div class="flex flex-col items-center">
+  <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=360&q=80" alt="Featured Product" class="rounded-xl shadow-xl" style="height: 190px;" />
+  <div class="mt-8 text-2xl font-bold" style="color: #0A192F;">Product Name</div>
+  <div class="mt-2 text-lg" style="color: #F9A826;">The best choice for modern users</div>
+</div>
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
+<div class="flex justify-center gap-8 mt-9">
+  <button class="px-7 py-2 bg-[#0A192F] rounded-lg text-white font-semibold">Learn More</button>
+  <button class="px-7 py-2 bg-[#F9A826] rounded-lg text-white font-semibold">Buy Now</button>
+</div>
 
 ---
 layout: image-right
 image: https://cover.sli.dev
 ---
 
-# Code
+transition: slide-left
+background: "#FFF"
+class: text-center
+---
 
-Use code snippets and get the highlighting directly, and even types hover!
+# Share Your Presentation
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
+<div class="flex flex-col items-center justify-center mt-6">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://your-presentation.link" alt="Share QR" class="shadow-lg rounded" style="margin-bottom:1rem;" />
+  <div class="text-md mb-4" style="color:#0A192F">Scan to view or share:<br/>
+    <span style="color: #F9A826; font-weight:600;">https://your-presentation.link</span>
+  </div>
+  <button class="px-5 py-2 bg-[#0A192F] rounded-lg text-white font-semibold" @click="navigator.clipboard.writeText('https://your-presentation.link')">Copy Link</button>
+</div>
 
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
+---
 
 ---
 level: 2
@@ -600,37 +594,19 @@ hide: false
 
 ---
 
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
-
----
-layout: center
+transition: fade-in
+background: "#F9A826"
 class: text-center
 ---
 
-# Learn More
+# Thank You!
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div class="mt-6 mb-6 text-3xl font-bold" style="color:#0A192F;">Ready to showcase your product?</div>
+<div class="mb-9 text-lg" style="color: #FFF">Start now. Make your story memorable.</div>
 
-<PoweredBySlidev mt-10 />
+<div class="flex justify-center gap-8">
+  <a href="mailto:contact@yourproduct.com" class="px-7 py-2 bg-[#0A192F] rounded-lg text-white font-semibold">Contact Us</a>
+  <a href="https://your-presentation.link" class="px-7 py-2 bg-[#FFF] border border-[#0A192F] rounded-lg text-[#0A192F] font-semibold">Back to Home</a>
+</div>
+
+---

@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+// Lint loader compatible with ESM/module Node.js environments
+import('./lint.cjs');
